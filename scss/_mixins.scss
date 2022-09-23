@@ -1,0 +1,29 @@
+/*! start mixins */
+@mixin circle($diameter) {
+  & {
+    width: $diameter;
+    height: $diameter;
+    border-radius: 50%;
+  }
+}
+
+@mixin breakPoints($point) {
+  @if $point == mobile {
+    @media (min-width: 320px) and (max-width: 767px) {
+      @content;
+    }
+  } @else if $point == small {
+    @media (min-width: 768px) and (max-width: 991px) {
+      @content;
+    }
+  } @else if $point == medium {
+    @media (min-width: 992px) and (max-width: 1199px) {
+      @content;
+    }
+  } @else if $point == large {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+}
+
