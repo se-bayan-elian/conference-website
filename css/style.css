@@ -1,0 +1,127 @@
+/*! start mixins */
+.main-header .conference-sec .conference-date-address {
+  margin-bottom: 20px;
+}
+.main-header .conference-sec .conference-info p {
+  font-size: 16px;
+}
+.main-header .conference-sec .conference-info h1 {
+  font-size: 60px;
+}
+.main-header .conference-sec .conference-time-left .boxes {
+  width: 75%;
+}
+.main-header .conference-sec .conference-time-left .boxes .box span,
+.main-header .conference-sec .conference-time-left .boxes .box p {
+  font-size: 22px;
+}
+.main-header .conference-sec .button a {
+  font-size: 14px;
+  padding: 13px 40px;
+}
+.main-header .navbar .container {
+  max-width: 75% !important;
+}
+.main-header .navbar .nav-list {
+  width: 65%;
+}
+.main-header .navbar .nav-list .nav-item {
+  padding: 0;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.main-header .navbar .nav-list .nav-item a {
+  text-align: center;
+  padding: 0;
+}
+.main-header .navbar .btn {
+  padding: 0;
+}
+.main-header .navbar .btn a {
+  padding: 10px 35px !important;
+}
+
+.conference-schedule .conferences .conference .content h1,
+.conference-schedule .conferences .conference .content span,
+.conference-schedule .conferences .conference .content p {
+  text-align: left;
+}
+.conference-schedule .conferences .line {
+  right: auto;
+  left: 84px;
+}
+
+.contact-us .content {
+  margin-left: 22%;
+}
+.contact-us .content h1,
+.contact-us .content h3 {
+  text-align: left !important;
+}
+.contact-us .content ul li p,
+.contact-us .content ul li a {
+  font-size: 14px !important;
+}
+
+footer p {
+  font-size: 15px !important;
+}
+
+.tools #options-list li:nth-child(1) h1 {
+  text-align: left !important;
+  margin-bottom: 5px;
+}
+.tools #options-list li:nth-child(2) a:nth-child(1) {
+  border-radius: 0;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.tools #options-list li:nth-child(2) a:nth-child(2) {
+  border-radius: 0;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .main-header .conference-sec .container .conference-date-address {
+    gap: 20px;
+  }
+
+  .main-header {
+    padding: 0;
+  }
+  .main-header .overlay {
+    padding: 40px 0px;
+  }
+
+  .main-header .conference-sec .container {
+    top: 45px;
+  }
+
+  .main-header .conference-sec .conference-time-left .boxes {
+    width: 100% !important;
+  }
+
+  .main-header .conference-sec .conference-time-left .boxes .box p {
+    font-size: 11px !important;
+  }
+
+  .main-header .button a {
+    padding: 10px 30px;
+    font-size: 11px;
+  }
+}
+@media (max-width: 1199px) {
+  .navbar nav {
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important;
+  }
+
+  .contact-us .content h1, .contact-us .content h3 {
+    text-align: center !important;
+  }
+}
+/*# sourceMappingURL=style.css.map */
