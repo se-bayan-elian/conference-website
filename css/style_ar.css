@@ -1313,7 +1313,7 @@ button {
   -webkit-transition: 0.5s;
   transition: 0.5s;
   background-color: rgba(44, 62, 80, 0.7);
-  border-right: 1px solid rgba(204, 204, 204, 0.2);
+  border-left: 1px solid rgba(204, 204, 204, 0.2);
 }
 .stats .boxes .box:last-child {
   border-right: 0;
