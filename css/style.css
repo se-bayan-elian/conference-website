@@ -51,6 +51,11 @@
   right: auto;
   left: 84px;
 }
+.stats .boxes .box {
+    border-right: 1px solid rgba(204, 204, 204, 0.2) !important;
+    border-left : 0 !important;
+
+}
 
 .contact-us .content {
   margin-left: 22%;
