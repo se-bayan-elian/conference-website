@@ -97,10 +97,14 @@ lightGallery(document.getElementById('ul-li'), {
     }
   });
   // set stats section loading animation 
+  let isReached = false;
   $(window).on("scroll",function(){
     if($("html").scrollTop() >= $(".stats").offset().top -300) {
-      $(".stats .container").css("visibility","visible");
-      $(".stats .box").addClass("animate__animated animate__rubberBand animate__delay-1s");
+      if(!isReached){
+        $(".stats .container").css("visibility","visible");
+        countUp(128,40,30,20)
+        isReached = true;
+      }
       
     }
   });
@@ -169,4 +173,54 @@ $(window).on('beforeunload', function(){
 });
 
 
+// create count down func to calculate time lifting
+function countDown (){
+  // fetch boxes 
+  let daysBox = document.querySelector('.num-of-days')
+  let hrsBox = document.querySelector('.num-of-hours')
+  let minsBox = document.querySelector('.num-of-minutes')
+  let secsBox = document.querySelector('.num-of-secondes')
+  // 
+  let countId = setInterval(()=>{
+    if(secsBox.textContent == 0 ){
+      if(minsBox.textContent != 0){
+        minsBox.textContent--;
+        secsBox.textContent = 60;
+      }
+      else if(hrsBox.textContent !=0  ){
+        hrsBox.textContent--;
+        minsBox.textContent=59;
+        secsBox.textContent = 60;
+      }
+      else if (daysBox.textContent !=0){
+        daysBox.textContent--;
+        hrsBox.textContent= 23;
+        minsBox.textContent=59;
+        secsBox.textContent = 60;
+      }
+      else {
+        clearInterval(countId);
+        return ;
+      }
+    }
+    secsBox.textContent= (secsBox.textContent <10 ?'0':'' )+ (secsBox.textContent-1);
+  },1000)
+}
+// trigger the countDown function 
+countDown();
+// import count up class from count up .js module 
+import { CountUp } from './countUp.js';
 
+// create countUp func to animate number 
+function countUp (sNum,dNum,wNum,seNum){
+  
+  const SCountUp = new CountUp('numSpeakers', sNum);
+  SCountUp.start();
+  const DaysCountUp = new CountUp('numDays', dNum);
+  DaysCountUp.start();
+  const WSCountUp = new CountUp('WorkshopsNum', wNum);
+  WSCountUp.start();
+  const SeCountUp = new CountUp('seminarsNum', seNum);
+  SeCountUp.start();
+ 
+}

@@ -161,7 +161,8 @@ button {
 .dark-mode .conference-schedule {
   background-color: hsl(220deg, 18%, 20%) !important;
 }
-.dark-mode .conference-schedule .conference h1, .dark-mode .conference-schedule .conference p {
+.dark-mode .conference-schedule .conference h1,
+.dark-mode .conference-schedule .conference p {
   color: #ccc !important;
 }
 .dark-mode .conference-images {
@@ -186,7 +187,8 @@ button {
 .night-mode .nav-alter ul li a {
   color: white !important;
 }
-.night-mode .navbar, .night-mode .contact-us .right-side {
+.night-mode .navbar,
+.night-mode .contact-us .right-side {
   background-color: hsl(225deg, 27%, 7%) !important;
 }
 .night-mode .talkers {
@@ -213,7 +215,8 @@ button {
 .night-mode .conference-schedule {
   background-color: hsl(222deg, 47%, 11%) !important;
 }
-.night-mode .conference-schedule .conference h1, .night-mode .conference-schedule .conference p {
+.night-mode .conference-schedule .conference h1,
+.night-mode .conference-schedule .conference p {
   color: #ccc !important;
 }
 .night-mode .conference-images {
@@ -1313,7 +1316,7 @@ button {
   -webkit-transition: 0.5s;
   transition: 0.5s;
   background-color: rgba(44, 62, 80, 0.7);
-  border-left: 1px solid rgba(204, 204, 204, 0.2);
+  border-right: 1px solid rgba(204, 204, 204, 0.2);
 }
 .stats .boxes .box:last-child {
   border-right: 0;

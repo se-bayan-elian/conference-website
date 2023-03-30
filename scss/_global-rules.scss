@@ -1,4 +1,5 @@
 @use "_variables.scss" as *;
+
 /*! start setting global properties */
 * {
   margin: 0;
@@ -8,35 +9,43 @@
   box-sizing: border-box;
   font-family: Cairo, sans-serif;
 }
+
 @font-face {
   font-family: "ge-tv";
   src: url("../fonts/ge-tv/ge-tv.ttf");
 
 }
+
 @font-face {
   font-family: g-h;
   src: url("../fonts/glyphicons-halflings/regular/glyphicons-halflings-regular.ttf");
 }
+
 @font-face {
   font-family: "gf-flat-light";
   src: url("../fonts/JF-Flat/light/JF\ Flat\ light.woff");
 }
+
 @font-face {
   font-family: "gf-flat-medium";
   src: url("../fonts/JF-Flat/meduim/JF\ Flat\ medium.ttf");
 }
+
 @font-face {
   font-family: "gf-flat-regular";
   src: url("../fonts/JF-Flat/regular/JF-Flat-regular.ttf");
 }
+
 @font-face {
   font-family: "TitilliumWeb-regular";
   src: url("../fonts/TitilliumWeb/regular/TitilliumWeb-Regular.ttf");
 }
+
 @font-face {
   font-family: "TitilliumWeb-semi-bold";
   src: url("../fonts/TitilliumWeb/SemiBold/TitilliumWeb-SemiBold.ttf");
 }
+
 @font-face {
   font-family: "TitilliumWeb-bold";
   src: url("../fonts/TitilliumWeb/Bold/TitilliumWeb-Bold.ttf");
@@ -49,41 +58,54 @@
 ul {
   list-style-type: none;
 }
+
 a {
   text-decoration: none !important;
 }
-p{
+
+p {
   margin-bottom: 0;
 }
+
 button {
   cursor: pointer;
 }
+
 .sec-header {
-  margin: auto  {
+  margin: auto {
     bottom: 75px;
   }
+
   text-align: center;
+
   img {
     width: 65px;
     height: 35px;
-    margin : auto{
+
+    margin : auto {
       bottom: 10px
-    } ;
+    }
+
+    ;
   }
+
   h1 {
     font-size: 29px;
     font-family: "gf-flat-medium";
   }
+
   p {
     font-size: 15px;
     font-family: gf-flat-regular;
     color: #aaa;
   }
+
   span {
     color: $light-orange;
     font-family: gf-flat-regular;
   }
 }
+
 .overlay {
   position: absolute;
   top: 0;
@@ -92,6 +114,7 @@ button {
   bottom: 0;
   background-color: rgba($overlay-color, $alpha: 0.78);
 }
+
 .link-btn {
   font-size: 16px;
   font-family: gf-flat-medium;
@@ -99,12 +122,14 @@ button {
   padding: 13px 65px;
   border-radius: 5px;
   background-color: $main-color;
+
   &:hover {
     background-color: white;
     color: $main-color;
     box-shadow: 0 0 15px 5px rgba($main-color, $alpha: 0.5);
   }
 }
+
 .fixed-nav {
   position: fixed !important;
   top: 0;
@@ -113,145 +138,185 @@ button {
   z-index: 9999999999999999;
 }
 
-.dark-mode{
-  .sec-header{
-    h1{
-      color: hsl(220, 13% ,69%);
+.dark-mode {
+  .sec-header {
+    h1 {
+      color: hsl(220, 13%, 69%);
     }
   }
-  .nav-alter{
-    ul{
-      background-color: $main-color !important;
+
+  .nav-alter {
+    ul {
+      background-color: $main-color  !important;
     }
-    li{
-      a{
+
+    li {
+      a {
         color: white !important;
       }
-      &:hover{
-        background-color:hsl(220 ,18% ,20%) !important ;
+
+      &:hover {
+        background-color: hsl(220, 18%, 20%) !important;
       }
     }
   }
-  .nav-list-aside{
-    li{
-      background-color:hsl(220 ,18% ,20%)  !important ;
-      a{
-      color: white !important;
+
+  .nav-list-aside {
+    li {
+      background-color: hsl(220, 18%, 20%) !important;
+
+      a {
+        color: white !important;
 
       }
 
     }
   }
-  .talkers{
-    background-color: hsl(220 ,18% ,20%) !important;
-    .box{
-      background-color: hsl(220 ,18% ,20%) !important;
-       p{
+
+  .talkers {
+    background-color: hsl(220, 18%, 20%) !important;
+
+    .box {
+      background-color: hsl(220, 18%, 20%) !important;
+
+      p {
         color: white !important;
-       }
-       li{
-        &:nth-child(1){
+      }
+
+      li {
+        &:nth-child(1) {
           box-shadow: 0 0 9px 0.5px rgba($color: #1877f2, $alpha: 0.8);
         }
-        &:nth-child(2){
+
+        &:nth-child(2) {
           box-shadow: 0 0 9px 0.5px rgba($color: #1da1f2, $alpha: 0.8);
         }
-        &:nth-child(3){
+
+        &:nth-child(3) {
           box-shadow: 0 0 9px 0.5px rgba($color: #c32aa3, $alpha: 0.8);
         }
       }
     }
   }
-  .conference-schedule{
-    background-color: hsl(220 ,18% ,20%) !important;
-    .conference{
-      h1,p{
-         color: #ccc !important;
+
+  .conference-schedule {
+    background-color: hsl(220, 18%, 20%) !important;
+
+    .conference {
+
+      h1,
+      p {
+        color: #ccc !important;
       }
     }
   }
-  .conference-images{
-    background-color: hsl(220 ,18% ,20%) !important;
+
+  .conference-images {
+    background-color: hsl(220, 18%, 20%) !important;
   }
-  .speedUp{
+
+  .speedUp {
     background-color: #1877f2 !important;
   }
-  .tools{
-    #options-btn{
+
+  .tools {
+    #options-btn {
       background-color: #1877f2;
-      svg{
-        color: white ;
+
+      svg {
+        color: white;
       }
     }
   }
- 
+
 }
-.night-mode{
-  .sec-header{
-    h1{
-      color: hsl(222, 66% ,82%);
+
+.night-mode {
+  .sec-header {
+    h1 {
+      color: hsl(222, 66%, 82%);
     }
   }
-  .nav-alter{
-    ul{
+
+  .nav-alter {
+    ul {
       background-color: hsl(220, 27%, 7%) !important;
-      li{
-        a{
+
+      li {
+        a {
           color: white !important;
         }
       }
     }
   }
-  .navbar,.contact-us .right-side{
+
+  .navbar,
+  .contact-us .right-side {
     background-color: hsl(225, 27%, 7%) !important;
   }
-  .talkers{
+
+  .talkers {
     background-color: hsl(222, 47%, 11%) !important;
-    .box{
+
+    .box {
       background-color: hsl(222, 47%, 11%) !important;
-      p{
+
+      p {
         color: #ccc !important;
-       }
-       li{
-        &:nth-child(1){
+      }
+
+      li {
+        &:nth-child(1) {
           box-shadow: 0 0 9px 0.5px rgba($color: #1877f2, $alpha: 0.8);
         }
-        &:nth-child(2){
+
+        &:nth-child(2) {
           box-shadow: 0 0 9px 0.5px rgba($color: #1da1f2, $alpha: 0.8);
         }
-        &:nth-child(3){
+
+        &:nth-child(3) {
           box-shadow: 0 0 9px 0.5px rgba($color: #c32aa3, $alpha: 0.8);
         }
       }
     }
   }
-  .conference-schedule{
+
+  .conference-schedule {
     background-color: hsl(222, 47%, 11%) !important;
-    .conference{
-      h1,p{
-         color: #ccc !important;
+
+    .conference {
+
+      h1,
+      p {
+        color: #ccc !important;
       }
     }
   }
-  .conference-images{
+
+  .conference-images {
     background-color: hsl(222, 47%, 11%) !important;
   }
-  .speedUp{
+
+  .speedUp {
     background-color: #1877f2;
   }
-  .nav-list-aside{
-    li{
+
+  .nav-list-aside {
+    li {
       background-color: hsl(222deg, 47%, 11%) !important;
-      a{
+
+      a {
         color: white !important;
       }
     }
   }
-  .tools{
-    #options-btn{
+
+  .tools {
+    #options-btn {
       background-color: #1877f2;
-      svg{
-        color: white ;
+
+      svg {
+        color: white;
       }
     }
   }
